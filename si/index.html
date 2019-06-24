@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<meta charset="utf-8">
+<title>HTML</title>
+<link href="https://fonts.googleapis.com/css?family=Krub" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet" type="text/css">	
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+
+<nav class='cf'>
+  <ul class='cf'>
+    <li>
+      <a href='#'>Home</a>
+    </li>
+    <li>
+      <a href='#'>serviços</a>
+    </li>
+    <li>
+      <a href='#'>contactos</a>
+    </li>
+    <li>
+      <a href='#'>sobre nós</a>
+    </li>
+  </ul>
+  <a href='#' id='openup'>MENU</a>
+</nav>
+<h1>TIX</h1>
+<p>Transportes Internacionais.</p>
+
+
+<div id="slider">
+    <figure>
+        <img src="img/1.jpg">
+        <img src="img/2.jpg">
+        <img src="img/3.jpg">
+
+    </figure>
+</div>
+
+    <script>
+
+        $(function () {
+                menu = $('nav ul');
+
+                $('#openup').on('click', function (e) {
+                    e.preventDefault(); menu.slideToggle();
+                });
+
+                $(window).resize(function () {
+                    var w = $(this).width(); if (w > 480 && menu.is(':hidden')) {
+                        menu.removeAttr('style');
+                    }
+                });
+
+                $('nav li').on('click', function (e) {
+                    var w = $(window).width(); if (w < 480) {
+                        menu.slideToggle();
+                    }
+                });
+                $('.open-menu').height($(window).height());
+            });
+
+    </script>
+
+    </body>
+
+    </html>
